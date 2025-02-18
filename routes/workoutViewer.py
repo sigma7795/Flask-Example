@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template
-
-workoutPageBlueprint = Blueprint('workoutpage', __name__)
-
-@workoutPageBlueprint.route('/workoutpage')
-def workoutPage():
-    return render_template('workoutpage.html')
-
+# Imports flask blueprint template
+workoutViewerBlueprint = Blueprint('workoutviewer', __name__)
+# Stores blueprint under identifier
+@workoutViewerBlueprint.route('/workoutviewer')
+def workoutViewer():
+    return render_template('workoutViewer.html')
+# Routes blueprint to corresponding URL extension and returns template to corect HTML document

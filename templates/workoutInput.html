@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Sets page type, dimensions, character set, language -->
+    <title>Document</title>
+
+</head>
+<body>
+    <div>
+        <h1>Workout Input Page</h1>
+        <!-- Creates title -->
+            <div>
+                <label for = 'Title'> Title: </label>
+                <input type = 'text' name = 'title' id = 'title' required>
+            </div>
+            <!-- Creates workout title input box -->
+            <div> 
+                <label for = 'Type'> Type: </label>
+                <select id= 'type' required>
+                    <option value="run">Run</option>
+                    <option value="cycle">Cycle</option>
+                    <option value="swim">Swim</option>
+                  </select>
+            </div>
+            <!-- Creates workout type input box -->
+            <div>
+                <label for = 'Distance'> Distance: </label>
+                <input type = 'text' name = 'distance' id = 'distance' required> km
+            </div>
+            <!-- Creates a workout distance input box -->
+            <div>
+                <label for = 'Time'> Time: </label>
+                <input type = 'time' name = 'time' id = 'time' required>
+            </div>
+            <!-- Creates a workout time input box -->
+            <div> 
+                <input type = 'submit' value = 'Save'>
+            </div>
+            <!-- Creates save button -->
+        </form>
+        <p class = 'text-center'><a href = '/dashboard'>Home</a></p>
+        <!-- Creates home button which takes user back to dashboard page-->
+    </div>
+</body>
+</html>
+

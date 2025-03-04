@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Line Graph using Chart.js</title> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 </head>
-<!-- Sets document type, language, character set and scale -->
 <body>
     <h1>Workout Graph Viewer</h1>
-    <img src="{{url_for('static', filename='my_plot.png')}}" style="width: 20%; height: auto;">
-<!-- Creates title of page -->
-    <a href = '/dashboard'>Home</a>
-<!-- Creates link back to dashboard page through 'home' button -->    
+    <!-- <img src="{{url_for('static', filename='my_plot.png')}}" style="width: 20%; height: auto;"> -->
+    <a href='/dashboard'>Home</a>
+
+    <canvas id="myLineChart"></canvas>
+
+    <script>
+        const workouts = {{ workouts | tojson }};
+        const labels = workouts.map(workout => workout[0]); // Assuming workoutName is the label
+        const data = workouts.map(workout => workout[2]); // Assuming distance is the data
+
+        const ctx = document.getElementById('myLineChart').getContext('2d');
+        const myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Workout Distance',
+                    data: data,
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                    borderWidth: 2,
+                    pointRadius: 5,
+                    pointBackgroundColor: 'red',
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

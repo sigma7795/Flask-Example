@@ -9,32 +9,38 @@
     <div>
         <h1>Calorie Input Page</h1>
         <!-- Creates title -->
-        <div>
-            <label for = 'name'> Food Name: </label>
-            <input type = 'name' name = 'name' id = 'name' required>
-        </div>
-        <!-- Creates food name input box -->
-        <div>
-            <label for = 'Calories'> Total Calories: </label>
-            <input type = 'calories' name = 'calories' id = 'calories' required>
-        </div>
-        <!-- Creates food calories input box -->
-        <div>
-            <label for = 'Time'> Time: </label>
-            <input type = 'time' name = 'time' id = 'time' required>
-        </div>  
-        <!-- Creates food time input box -->
-        <div>
-            <label for = 'meal type'> Meal Type: </label>
-            <input type = 'meal type' name = 'meal type' id = 'meal type' required>
-        </div>       
-        <!-- Creates food type input box -->
-        <div> 
-            <input type = 'submit' value = 'Save'>
-        </div>
-        <!-- Creates save button -->
-        <p><a href = '/dashboard'>Home</a></p>
-        <!-- Creates home button back to dashboard page -->
+        <form action = '/calorieinput' method = 'post'> 
+            <div>
+                <label for = 'foodName'> Food Name: </label>
+                <input type = 'text' name = 'foodName' id = 'foodName' required>
+            </div>
+            <!-- Creates food name input box -->
+            <div>
+                <label for = 'foodCalories'> Total Calories: </label>
+                <input type = 'number' name = 'foodCalories' id = 'foodCalories' required>
+            </div>
+            <!-- Creates food calories input box -->
+            <div>
+                <!-- <label for = 'Time'> Time: </label>
+                <input type = 'time' name = 'time' id = 'time' required> -->
+            </div>  
+            <!-- Creates food time input box -->
+            <div>
+                <label for = 'mealType'> Meal Type: </label>
+                <select id= 'mealType' name = "mealType" required>
+                    <option name = "mealType" value="breakfast">Breakfast</option>
+                    <option name = "mealType" value="lunch">Lunch</option>
+                    <option name = "mealType" value="dinner">Dinner</option>
+                    <option name = "mealType" value="snack">Snack</option>
+                </select>
+            </div>       
+            <!-- Creates food type input box -->
+            <div> 
+                <input type = 'submit' value = 'Save'>
+            </div>
+            <!-- Creates save button -->
+            <p><a href = '/dashboard'>Home</a></p>
+            <!-- Creates home button back to dashboard page -->
     </body>
     </html>
 

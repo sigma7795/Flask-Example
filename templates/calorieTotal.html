@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets page type, language, character set and scale -->
+</head>
+<body>        
+    <div>
+        <h1>Calorie Total</h1>
+    <!-- Creates title of page -->
+    <!-- Creates link back to dashboard page through 'home' button -->
+    <h2>Calories Consumed: {{totalCalories}}</h2>
+    <!-- Creates link back to workout viewer page through 'view' button -->
+        
+        <!-- Creates title -->
+        <form action = '/caloriepagecalculator', method = 'post'>
+            <div>
+                <label for = 'userWeight'> Weight: </label> 
+                <input type = 'number' name = 'userWeight' id = 'userWeight' required> kg
+            </div>
+            <!-- Creates food name input box -->
+            <div>
+                <label for = 'userHeight'> Height: </label>
+                <input type = 'number' name = 'userHeight' id = 'userHeight' required> cm
+            </div>
+            <label for = 'userAge'> Age: </label>
+            <input type = 'number' name = 'userAge' id = 'userAge' required> years
+            <div>  
+                <label for = 'userGender'> Gender: </label>
+                <select id= 'userGender' name = "userGender" required>
+                <option name = "userGender" value="male">Male</option>
+                <option name = "userGender" value="female">Female</option>
+            </div>    
+                </label>
+            </select>
+                <div>
+            <label for = 'date'> Date: </label>
+            <input type = 'date' name = 'date' id = 'date' required> 
+            </div>
+            <div> 
+                <input type = 'submit' value = 'Save'> #Figure out how to save these values as inputs
+            </div>
+            <!-- Creates save button -->
+            <p><a href = '/dashboard'>Home</a></p>
+            <!-- Creates home button back to dashboard page -->
+        </form> 
+    </body>
+    </html>
+

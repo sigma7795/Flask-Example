@@ -11,28 +11,29 @@
     <div>
         <h1>Workout Input Page</h1>
         <!-- Creates title -->
+        <form action = '/workoutinput' method = 'POST'>
             <div>
-                <label for = 'Title'> Title: </label>
-                <input type = 'text' name = 'title' id = 'title' required>
+                <label for = 'workoutName'> Title: </label>
+                <input type = 'text' name = 'workoutName' id = 'workoutName' required>
             </div>
             <!-- Creates workout title input box -->
             <div> 
-                <label for = 'Type'> Type: </label>
-                <select id= 'type' required>
-                    <option value="run">Run</option>
-                    <option value="cycle">Cycle</option>
-                    <option value="swim">Swim</option>
-                  </select>
+                <label for = 'workoutType'> Type: </label>
+                <select id= 'workoutType' name = "workoutType" required>
+                    <option name = "workoutType" value="run">Run</option>
+                    <option name = "workoutType" value="cycle">Cycle</option>
+                    <option name = "workoutType" value="swim">Swim</option>
+                </select>
             </div>
             <!-- Creates workout type input box -->
             <div>
-                <label for = 'Distance'> Distance: </label>
-                <input type = 'text' name = 'distance' id = 'distance' required> km
+                <label for = 'workoutDistance'> Distance: </label>
+                <input type = 'text' name = 'workoutDistance' id = 'workoutDistance' required> km
             </div>
             <!-- Creates a workout distance input box -->
             <div>
-                <label for = 'Time'> Time: </label>
-                <input type = 'time' name = 'time' id = 'time' required>
+                <label for = 'workoutTime'> Time: </label>
+                <input type = 'number' name = 'workoutTime' id = 'workoutTime' required> minutes
             </div>
             <!-- Creates a workout time input box -->
             <div> 
